@@ -714,16 +714,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 4. Monitor API performance and errors
 5. Set up proper logging and alerting
 
----
-
-## 📞 Support
-
-If you encounter any issues or have questions:
-
-1. Check the [documentation](#documentation)
-2. Search [existing issues](https://github.com/zubairashfaque/Sentiment-Analysis-with-Naive-Bayes-Streamlit/issues)
-3. Open a [new issue](https://github.com/zubairashfaque/Sentiment-Analysis-with-Naive-Bayes-Streamlit/issues/new)
-4. Contact: mianashfaque@gmail.com
 
 ---
 
