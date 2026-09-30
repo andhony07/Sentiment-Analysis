@@ -13,6 +13,7 @@ A production-ready sentiment analysis application featuring multiple ML models (
 ## ✨ Features
 
 ### 🤖 Multiple Models
+
 - **Naive Bayes**: Fast, lightweight (~75% accuracy)
 - **BERT**: State-of-the-art transformer (~90% accuracy)
 - **RoBERTa**: Enhanced transformer (~92% accuracy)
@@ -20,10 +21,12 @@ A production-ready sentiment analysis application featuring multiple ML models (
 - **Ensemble**: Combined models (~93% accuracy)
 
 ### 🌐 Dual Interface
+
 - **REST API**: FastAPI-powered with OpenAPI documentation
 - **Web UI**: Interactive Streamlit application
 
 ### 🚀 Production Features
+
 - Type hints and comprehensive documentation
 - Modular, maintainable architecture
 - Configurable preprocessing pipeline
@@ -75,11 +78,13 @@ This isn't just another ML tutorial - it's a **production-ready, enterprise-grad
 ### Business Impact
 
 **Cost Savings:**
+
 - Manual review: $1,500/day (100 reviews × $15/hour)
 - Automated: $1.67/day (cloud hosting)
 - **Savings: ~$45,000/month**
 
 **Efficiency:**
+
 - Human: 100 reviews/hour
 - Our system: 1,000+ reviews/second
 - **36,000x faster**
@@ -87,12 +92,14 @@ This isn't just another ML tutorial - it's a **production-ready, enterprise-grad
 ### Future Value
 
 **For Your Career:**
+
 - 🎯 Portfolio piece for ML Engineer roles
 - 💼 Discussion topic for technical interviews
 - 📚 Learning template for ML deployment
 - 🌟 Open source contribution
 
 **For Business:**
+
 - 💰 Revenue through freelancing/consulting ($2K-20K per project)
 - 📈 Scalable to millions of texts
 - 🚀 Deploy to production immediately
@@ -193,6 +200,7 @@ python scripts/run_streamlit.py
 ```
 
 **Features:**
+
 - Real-time sentiment prediction
 - Probability score visualization
 - Example texts for quick testing
@@ -210,6 +218,7 @@ python scripts/run_api.py --host 0.0.0.0 --port 8000 --reload
 **API Endpoints:**
 
 #### Predict Single Text
+
 ```bash
 curl -X POST "http://localhost:8000/predict" \
   -H "Content-Type: application/json" \
@@ -221,6 +230,7 @@ curl -X POST "http://localhost:8000/predict" \
 ```
 
 **Response:**
+
 ```json
 {
   "text": "I love this product!",
@@ -236,6 +246,7 @@ curl -X POST "http://localhost:8000/predict" \
 ```
 
 #### Batch Prediction
+
 ```bash
 curl -X POST "http://localhost:8000/predict/batch" \
   -H "Content-Type: application/json" \
@@ -246,27 +257,32 @@ curl -X POST "http://localhost:8000/predict/batch" \
 ```
 
 #### List Available Models
+
 ```bash
 curl "http://localhost:8000/predict/models"
 ```
 
 **Interactive Documentation:**
+
 - Swagger UI: `http://localhost:8000/docs`
 - ReDoc: `http://localhost:8000/redoc`
 
 #### How to Test the API
 
 **Step 1: Install FastAPI (if not already installed)**
+
 ```bash
 pip install fastapi "uvicorn[standard]"
 ```
 
 **Step 2: Start the Server**
+
 ```bash
 python scripts/run_api.py --reload
 ```
 
 You should see:
+
 ```
 🚀 Starting Sentiment Analysis API...
 📍 Host: 0.0.0.0
@@ -278,6 +294,7 @@ You should see:
 **Step 3: Test in Browser**
 
 Open `http://localhost:8000/docs` in your browser for interactive testing:
+
 1. Click on any endpoint (e.g., "POST /predict")
 2. Click "Try it out"
 3. Enter test data
@@ -300,6 +317,7 @@ curl http://localhost:8000/predict/models
 ```
 
 **Step 5: Test with Python**
+
 ```python
 import requests
 
@@ -397,29 +415,32 @@ prediction = ensemble.predict("Amazing product!")
 
 ### Model Comparison
 
-| Model | Parameters | Speed | Accuracy | Best For |
-|-------|-----------|-------|----------|----------|
-| **Naive Bayes** | < 1M | ⚡⚡⚡⚡⚡ | ~75% | Fast inference, low resource |
-| **DistilBERT** | 66M | ⚡⚡⚡⚡ | ~88% | Balanced speed/accuracy |
-| **BERT** | 110M | ⚡⚡⚡ | ~90% | High accuracy |
-| **RoBERTa** | 125M | ⚡⚡⚡ | ~92% | Best accuracy |
-| **Ensemble** | Combined | ⚡⚡ | ~93% | Maximum accuracy |
+| Model           | Parameters | Speed      | Accuracy | Best For                     |
+| --------------- | ---------- | ---------- | -------- | ---------------------------- |
+| **Naive Bayes** | < 1M       | ⚡⚡⚡⚡⚡ | ~75%     | Fast inference, low resource |
+| **DistilBERT**  | 66M        | ⚡⚡⚡⚡   | ~88%     | Balanced speed/accuracy      |
+| **BERT**        | 110M       | ⚡⚡⚡     | ~90%     | High accuracy                |
+| **RoBERTa**     | 125M       | ⚡⚡⚡     | ~92%     | Best accuracy                |
+| **Ensemble**    | Combined   | ⚡⚡       | ~93%     | Maximum accuracy             |
 
 ### Model Details
 
 #### Naive Bayes
+
 - Custom implementation with Laplacian smoothing
 - Log probabilities for numerical stability
 - Fast training and inference
 - Interpretable results
 
 #### Transformer Models (BERT, RoBERTa, DistilBERT)
+
 - Based on Hugging Face transformers
 - Fine-tuned on your data
 - GPU acceleration support
 - State-of-the-art performance
 
 #### Ensemble
+
 - Combines multiple models
 - Weighted voting strategy
 - Model agreement tracking
@@ -571,6 +592,7 @@ mypy src/
 ## 🎯 Use Cases
 
 ### Business Applications
+
 - Customer feedback analysis
 - Product review sentiment tracking
 - Social media monitoring
@@ -578,6 +600,7 @@ mypy src/
 - Customer support ticket classification
 
 ### Research & Education
+
 - NLP research and experimentation
 - Machine learning education
 - Model comparison studies
@@ -588,18 +611,21 @@ mypy src/
 ## 📊 Performance
 
 ### Naive Bayes
+
 - **Training Time**: ~2 seconds (10K samples)
 - **Inference Time**: ~10ms per text
 - **Memory**: ~50MB
 - **Accuracy**: ~75%
 
 ### BERT
+
 - **Training Time**: ~30 minutes (10K samples, 3 epochs, GPU)
 - **Inference Time**: ~50ms per text (GPU), ~150ms (CPU)
 - **Memory**: ~500MB
 - **Accuracy**: ~90%
 
 ### Ensemble
+
 - **Inference Time**: Combined model times
 - **Memory**: Sum of model memories
 - **Accuracy**: ~93%
@@ -627,6 +653,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👤 Author
 
 **Zubair Ashfaque**
+
 - AI Tech Lead | Machine Learning Engineer
 - Email: mianashfaque@gmail.com
 - GitHub: [@zubairashfaque](https://github.com/zubairashfaque)
@@ -667,6 +694,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ### For Best Performance
 
 1. **Use GPU** for transformer models:
+
    ```bash
    # Check GPU availability
    python -c "import torch; print(torch.cuda.is_available())"
@@ -702,7 +730,5 @@ If you encounter any issues or have questions:
 <div align="center">
 
 **⭐ Star this repository if you find it helpful!**
-
-**Made with ❤️ by Zubair Ashfaque**
 
 </div>
